@@ -1,49 +1,89 @@
-<a href="https://youtu.be/sQ1zvdS8eU8">
-  <img alt="AI-powered WhatsApp." src="https://i.ibb.co/YcWpZ5F/Screenshot-24.png">
-  <h1 align="center">AI Powered WhatsApp Clone</h1>
-</a>
+# Messaging Service Prototype
 
-<p align="center">
- Make WhatsApp a little bit more exiciting by integratin GPT and DALL-E-3 
-</p>
+## Overview
+This project is a prototype of a **Messaging Service** built to demonstrate core features such as user registration, text messaging, and real-time updates. Additionally, optional features such as an AI-powered chatbot and video/audio calling are implemented. The app can be built either as a **web app** (Next.js) or **mobile app** (Ionic React).
 
-<p align="center">
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-</p>
-<br/>
+## Features
 
-## Tech Stack
+### Core Features
+- **User Registration & Authentication**: Secure sign-up and login functionality.
+- **Text Messaging**: Send and receive messages between users.
+- **Group Chat**: Chat functionality for multiple users.
+- **Real-Time Updates**: Instant message updates using web sockets or similar technology.
 
--   [Convex](https://convex.dev/) for the database, real-time events and cloud functions
--   Next.js [App Router](https://nextjs.org/docs/app) for the framework
--   [ShadCN](https://ui.shadcn.com/) for UI components
--   [Convex File Storage](https://docs.convex.dev/file-storage) for storing images and videos
--   [ZegoCloud](https://www.zegocloud.com) for video calls
--   [Clerk](https://clerk.dev/) for user authentication
--   [Tailwind CSS](https://tailwindcss.com/) for styling
--   [TypeScript](https://www.typescriptlang.org/) just to feel cool
+### Optional Features
+- **AI-powered Chatbot**: A chatbot for user interaction.
+- **Video/Audio Calling**: Basic functionality for video and audio calls between users.
 
-## Deploy Your Own
+## Design
+- **User Interface**: Clean, intuitive, and easy-to-use interface designed with modern principles such as **Atomic Design**.
+  
+## App Type
+This prototype can be built using:
+- **Web App**: Developed using **Next.js** for a scalable, server-side rendered web application.
+- **Mobile App**: Built using **Ionic React** for cross-platform mobile support.
 
-You can deploy this app by setting up the following services and adding their environment variables:
+## Backend
+The backend REST API is developed using **best practices** in modern software development. Below are the details:
+- **Programming Language**: Node.js.
+- **Database**: Choose between **SQL** (e.g., PostgreSQL) or **noSQL** (e.g., MongoDB), depending on the specific use case.
 
-1. Run `npm install` to install dependencies.
-2. Run `npm run dev`. It will prompt you to log into [Convex](https://convex.dev) and create a project.
-3. It will then ask you to supply the `CLERK_ISSUER_URL`. To do this:
-    1. Make a [Clerk](https://clerk.dev) account.
-    2. Copy both the `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` [API keys](https://dashboard.clerk.com/last-active?path=api-keys) into `.env.local`.
-    3. Do steps 1-3 [here](https://docs.convex.dev/auth/clerk) and copy the Issuer URL.
-       It should look something like `https://some-animal-123.clerk.accounts.dev`.
-    4. Add `CLERK_ISSUER_URL` to your [Convex Environment Variables](https://dashboard.convex.dev/deployment/settings/environment-variables?var=CLERK_ISSUER_URL)
-       Paste the Issuer URL as the value and click "Save".
-4. Add `CLERK_HOST_NAME` to your [Convex Environment Variables](https://dashboard.convex.dev/deployment/settings/environment-variables?var=CLERK_ISSUER_URL) as for the value paste the `CLERK_ISSUER_URL's` value
-5. From your [CLERK](https://clerk.dev) account, under the WebHooks, add an endpoint which should look like this: `https://your-convex-url.convex.site/clerk` and select `user.created` `user.updated` `session.created` `session.ended` events. Copy the webhook secret and in your Convex Dashboard add this env variable `CLERK_WEBHOOK_SECRET` and paste the value
-6. Now your frontend and backend should be running and you should be able to log in but not support OpenAI features.
-7. Create an [OpenAI](https://platform.openai.com/) account to get $5 of free credit or pay for your current account and get your `OPENAI_API_KEY` and add it to Convex Dashboard
-8. To enable video calling, create a [ZEGOCLOUD](https://www.zegocloud.com) account, create a project and select voice && video calls. Paste `ZEGO_APP_ID` and `ZEGO_SERVER_SECRET` to .env.local and save
-9. Now it should be up and running. Check out the [TUTORIAL](https://youtu.be/sQ1zvdS8eU8) for a complete walk-through.
+### API Features:
+- Secure authentication (JWT/OAuth).
+- Efficient messaging endpoints for sending/receiving messages.
+- WebSocket support for real-time message delivery.
 
-## Thanks for your support
+## Documentation
 
--   Like && Subscribe for more projects like this
+### System Design Document
+The project includes a detailed **System Design Document** which explains:
+- The architecture of the messaging service.
+- Design patterns and frameworks used.
+- Database design (ER diagrams, collections/tables).
+  
+### Setup & Installation
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/rudrapratap70/IBY_Assignment.git
+    cd WHATSAPP-ClONE-MASTERY
+    ```
+
+2. **Install dependencies**:
+    For the frontend (Next.js/Ionic React):
+    ```bash
+    npm install
+    ```
+
+    For the backend (Node.js):
+    ```bash
+    # For Node.js
+    npm install
+    ```
+
+3. **Set up environment variables**:
+    Create a `.env` file in the root directory with the necessary environment variables (e.g., database URLs, API keys).
+
+4. **Run the application**:
+    ```bash
+    # Frontend
+    npm run dev
+    
+    # Backend
+    npm start 
+    ```
+
+### Dependencies & Libraries Used
+- **Frontend**: Next.js/Ionic React, Redux for state management, and any necessary UI libraries.
+- **Backend**: Express (Node.js), JWT for authentication, and a WebSocket library for real-time updates.
+- **Database**: MongoDB (NoSQL).
+
+### Why These Tools?
+- **Next.js**: For server-side rendering and optimized web performance.
+- **Ionic React**: For seamless cross-platform mobile development.
+- **MongoDB**: Flexible database choices depending on the scalability and structure of the data.
+
+## Contributing
+Feel free to fork this repository and create a pull request. We welcome contributions that improve the codebase or add new features!
+
