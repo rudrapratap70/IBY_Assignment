@@ -47,7 +47,7 @@ To set up the project locally, follow these steps:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/rudrapratap70/IBY_Assignment.git
-    cd WHATSAPP-ClONE-MASTERY
+    cd IBY - Chat Application
     ```
 
 2. **Install dependencies**:
@@ -86,4 +86,3 @@ To set up the project locally, follow these steps:
 
 ## Contributing
 Feel free to fork this repository and create a pull request. We welcome contributions that improve the codebase or add new features!
-
